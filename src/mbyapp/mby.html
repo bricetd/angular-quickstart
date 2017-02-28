@@ -1,0 +1,32 @@
+<h1>My first Angular Application</h1>
+<br>
+<p>Number of click(s) : {{nbClick}}</p>
+
+<div>
+  <p> Hello, {{userName}}</p>
+  <p [hidden]='hideEmail'> Your email is: <em>aUser.email</em></p>
+  <button (click)="toggle()">Show/Hidde your email</button>
+</div>
+<div>
+<p> Hello, {{aUser.username}} - {{aUser.email}}</p>
+
+<p> Hello, {{aUser.username + '-' + aUser.email}}</p>
+
+<p> Hello, {{getUsername()}}</p>
+
+<input value="{{getUsername()}}" type="text"/>
+</div>
+<div>
+<input [disabled]='disabledInput' type="text" placeholder="Type your texte here"/>
+
+<input [disabled]='isDisabled()' type="text" placeholder="Type your texte here"/>
+
+<input [disabled]='isDisabled()' type="text" [value]="aUser.username" placeholder="Type your texte here" #in (keyup)="0"/>
+
+<p>Your text is {{in.value}}</p>
+</div>
+
+<div>
+  <input [class.blue-bg]='isBluebg' type="text" placeholder="Type your texte here"/>
+  <input [style.background-color]='bgColor' type="text" placeholder="Type your texte here"/>
+</div>
